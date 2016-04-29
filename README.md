@@ -1,8 +1,15 @@
 # uWSGI WebSocket Bug Demo
 
- > Demo application for the uWSGI websockt bug - https://github.com/unbit/uwsgi/issues/1241
+ > Demo application for the uWSGI websocket bug - https://github.com/unbit/uwsgi/issues/1241
 
-To start the demo application execute `./start.sh`, navigate your browser to localhost:8080 and click on `Start WebSocket Test`.
+## Setup
+```shell
+git clone https://github.com/michaelimfeld/uwsgi-ws-bug-demo.git
+cd uwsgi-ws-bug-demo
+./start.sh
+```
+
+After executing the `./start.sh` script, navigate your browser to localhost:8080 and click on `Start WebSocket Test`.
 
 Take a look back at your console where you started the demo app and you'll see that not all messages have been received by the backend. If you refresh the page, the missing message will finally arrive.
 
