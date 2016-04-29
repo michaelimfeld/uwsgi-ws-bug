@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <script type="text/javascript">
+         function WebSocketTest()
+         {
+            var ws = new WebSocket("ws://localhost:8080/websocket");
+
+            ws.onopen = function(){
+                ws.send("Hello World - 1");
+                ws.send("Hello World - 2");
+                ws.send("Hello World - 3");
+            };
+
+            ws.onmessage = function (evt){
+            };
+
+            ws.onclose = function(){
+            };
+         }
+      </script>
+   </head>
+   <body>
+       <h1>uWSGI WebSocket Bug Demo</h1>
+       <p>This frontend will send 3 messages straight after eachother to the websocket server after clicking the Start button.</p>
+       <a href="javascript:WebSocketTest()">Start WebSocket Test</a>
+   </body>
+</html>
